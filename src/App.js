@@ -1,4 +1,5 @@
 import React from "react";
+import './App.css'
 // TODO: import useFormik from formik library
 import {useFormik} from 'formik'
 
@@ -29,26 +30,27 @@ function App() {
   });
 
   const errorStyles = {
-    color: "red"
+    color: "#ef233c"
   }
 
   return (
     <div>
-      <p>
-        <form onSubmit={formik.handleSubmit}>
+      
+        <form onSubmit={formik.handleSubmit} className="custom-form">
 
-          <div>Email</div>
+          <div className="title">Login Form</div>
+
+          <div className="label">Email</div>
           <input name="email" id="emailField" type="text" onChange={formik.handleChange} value={formik.values.email}/>
-          {formik.errors.email ? <div style={errorStyles} id="emailError">{formik.errors.email}</div> : null}
+          {formik.errors.email ? <div style={errorStyles} id="emailError" className="label">{formik.errors.email}</div> : null}
 
-          <div>Password</div>
+          <div className="label">Password</div>
           <input name="password" id="pswField" type="text" onChange={formik.handleChange} value={formik.values.password}/>
-          {formik.errors.password ? <div style={errorStyles} id="pswError">{formik.errors.password}</div> : null}
+          {formik.errors.password ? <div style={errorStyles} id="pswError" className="label">{formik.errors.password}</div> : null}
 
           <br/>
           <button type="submit" id="submitBtn">Submit</button>
         </form>
-      </p>
     </div>
   );
 }
