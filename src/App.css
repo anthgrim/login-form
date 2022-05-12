@@ -5,18 +5,25 @@
     font-family: 'Inter', sans-serif;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+}
+
 .custom-form {
     text-align: left;
     background-color: #293241;
-    padding: 35px;
+    width: 25%;
+    padding: 40px;
     border: none;
-    border-radius: 15px;
-    margin: 10% 20%;
+    border-radius: 10px;
+    margin: 10% 0;
 }
 
 .title{
     color: white;
     font-size: 1.75rem;
+    margin-bottom: 15px;
 }
 
 .label{
@@ -25,3 +32,28 @@
     color: white;
 }
 
+.custom-textbox{
+    text-align: left;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    border: none;
+    margin: 5px 0px;
+}
+
+.custom-btn{
+    margin-top: 10px;
+    padding: 10px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #127475;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.custom-btn:hover{
+    transform: scale(1.05);
+    box-shadow: 3px 3px;
+}

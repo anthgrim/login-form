@@ -30,26 +30,29 @@ function App() {
   });
 
   const errorStyles = {
-    color: "#ef233c"
+    color: "#ef233c",
+    width: "fit-content",
+    margin: "0px",
+    padding: "0"
   }
 
   return (
-    <div>
+    <div className="container">
       
-        <form onSubmit={formik.handleSubmit} className="custom-form">
+        <form className="custom-form" onSubmit={formik.handleSubmit}>
 
-          <div className="title">Login Form</div>
+          <div className="title">Welcome!</div>
 
           <div className="label">Email</div>
-          <input name="email" id="emailField" type="text" onChange={formik.handleChange} value={formik.values.email}/>
-          {formik.errors.email ? <div style={errorStyles} id="emailError" className="label">{formik.errors.email}</div> : null}
+          <input className="custom-textbox" name="email" id="emailField" type="text" onChange={formik.handleChange} value={formik.values.email}/>
+          {formik.errors.email ? <div style={errorStyles} id="emailError">{formik.errors.email}</div> : null}
 
           <div className="label">Password</div>
-          <input name="password" id="pswField" type="text" onChange={formik.handleChange} value={formik.values.password}/>
-          {formik.errors.password ? <div style={errorStyles} id="pswError" className="label">{formik.errors.password}</div> : null}
+          <input className="custom-textbox" name="password" id="pswField" type="text" onChange={formik.handleChange} value={formik.values.password}/>
+          {formik.errors.password ? <div style={errorStyles} id="pswError">{formik.errors.password}</div> : null}
 
           <br/>
-          <button type="submit" id="submitBtn">Submit</button>
+          <button className="custom-btn" type="submit" id="submitBtn">Submit</button>
         </form>
     </div>
   );
