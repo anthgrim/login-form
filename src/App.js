@@ -23,14 +23,19 @@ function App() {
         errors.email = "Username should be an email"
       }
 
-      if(!values.password) errors.password = "Field Required";
+      if(!values.password) {
+        errors.password = "Field Required";
+      }else if(values.password.length < 10) {
+        errors.password = "Password must be at least 10 characters long"
+      }
       
       return errors
     }
   });
 
   const errorStyles = {
-    color: "#ef233c",
+    fontSize: "15px",
+    color: "#e5383b",
     width: "fit-content",
     margin: "0px",
     padding: "0"
@@ -43,7 +48,7 @@ function App() {
 
           <div className="title">Welcome!</div>
 
-          <div className="label">Email</div>
+          <div className="label">Username</div>
           <input className="custom-textbox" name="email" id="emailField" type="text" onChange={formik.handleChange} value={formik.values.email}/>
           {formik.errors.email ? <div style={errorStyles} id="emailError">{formik.errors.email}</div> : null}
 
