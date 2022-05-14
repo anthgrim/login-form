@@ -11,7 +11,7 @@ To create a form with Usarname and Password Field, as well for a submit button. 
 - If the username and password pass the validation above, then display the message "Login Successful" in an `alert` box.
 
 ## Extras
-I personally added custom styles to the form, and a basic validation for password lenght. 
+- Custom styles
 
 ## Future Adds
 
@@ -23,7 +23,6 @@ I personally added custom styles to the form, and a basic validation for passwor
 ![image](./images/loginForm.png)
 ![image](./images/loginForm2.png)
 ![image](./images/loginForm3.png)
-![image](./images/loginForm4.png)
 ![image](./images/loginForm5.png)
 
 ## Author

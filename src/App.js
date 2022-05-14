@@ -23,11 +23,8 @@ function App() {
         errors.email = "Username should be an email"
       }
 
-      if(!values.password) {
-        errors.password = "Field Required";
-      }else if(values.password.length < 10) {
-        errors.password = "Password must be at least 10 characters long"
-      }
+      if(!values.password) errors.password = "Field Required"
+      
       
       return errors
     }
